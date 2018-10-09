@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { InfoPage } from './info.page';
+import {KeycloakService} from '../services/keycloak.service';
 
 @NgModule({
   imports: [
@@ -12,6 +13,7 @@ import { InfoPage } from './info.page';
     FormsModule,
     RouterModule.forChild([{ path: '', component: InfoPage }])
   ],
-  declarations: [InfoPage]
+  declarations: [InfoPage],
+    providers: [KeycloakService]
 })
 export class InfoPageModule {}
